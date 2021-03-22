@@ -1,8 +1,8 @@
 'use strict';
 const headListener = () => {
-const headerMain = document.querySelector('.header-main');
-headerMain.addEventListener(('click'), (event) => { 
-let target = event.target; 
+document.addEventListener(('click'), (event) => { 
+let target = event.target;
+
 const clubsList = () => {
 let clubsListItem = document.querySelector('.clubs-list > ul');
 let clubsListBtn = document.querySelector('.clubs-list > p');
@@ -15,6 +15,36 @@ if (!target.closest('.clubs-list'))
 };
 clubsList();
 
+let freeVisitForm = document.querySelector('#free_visit_form');
+let callbackForm = document.querySelector('#callback_form');
+let gift = document.querySelector('#gift');
+let closeIcon = document.querySelectorAll('.close_icon');
+let overlay = document.querySelectorAll('.overlay');
+let fixedGift = document.querySelector('.fixed-gift');
+if (target.closest('.open-popup')) {
+freeVisitForm.style.display = 'block';
+} 
+if (target.closest('#callback_form-btn')) {
+callbackForm.style.display = 'block';
+} 
+if (target.closest('.fixed-gift')) {
+gift.style.display = 'block';
+fixedGift.style.display = 'none';
+}
+closeIcon.forEach((item)=>{
+if (target === item){
+freeVisitForm.style.display = 'none';
+callbackForm.style.display = 'none';
+gift.style.display = 'none';
+}
+});
+overlay.forEach((item)=>{
+if (target === item){
+freeVisitForm.style.display = 'none';
+callbackForm.style.display = 'none';
+gift.style.display = 'none';
+}
+});
 });
 };
 
