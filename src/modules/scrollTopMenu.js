@@ -4,6 +4,7 @@ const scrollTopMenu = () => {
   let head = document.querySelector('.head');
   let headSlider = document.querySelector('.head-slider');
   let totop = document.querySelector('#totop');
+  totop.style.display = 'none';
   document.addEventListener(('scroll'),()=>{
     if(screen.width < 768) {
       if (topMenu.getBoundingClientRect().top < 0){

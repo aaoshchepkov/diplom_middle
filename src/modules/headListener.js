@@ -42,6 +42,9 @@ const headListener = () => {
     if (target.closest('.scroll > a') || target === closeMenuBtn){
       popupMenu.style.display = 'none';
     }
+    if(target.closest('.close-btn')){
+      gift.style.display = 'none';
+    }
     closeIcon.forEach((item) => {
       if (target === item) {
         freeVisitForm.style.display = 'none';
