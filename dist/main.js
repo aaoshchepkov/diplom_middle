@@ -1,1 +1,1 @@
-window.addEventListener("DOMContentLoder",(()=>{}));
+(()=>{"use strict";document.querySelector(".header-main").addEventListener("click",(e=>{let l=e.target;(()=>{let e=document.querySelector(".clubs-list > ul"),t=document.querySelector(".clubs-list > p");l===t&&"block"===e.style.display?e.style.display="none":l===t&&(e.style.display="block"),l.closest(".clubs-list")||(e.style.display="none")})()}))})();
