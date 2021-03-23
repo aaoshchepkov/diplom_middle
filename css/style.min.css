@@ -551,7 +551,7 @@ html#schelkovo #adv-slider .slider-arrow span {
   background-color: #f4c71b;
   border-radius: 50%;
   text-align: center;
-  padding-top: 11px
+  
 }
 
 html#mozaika #adv-slider .slider-arrow.prev,
@@ -1633,7 +1633,7 @@ nav.popup-menu .close-menu-btn img {
   background-color: #f4c71b;
   border-radius: 50%;
   text-align: center;
-  padding-top: 11px
+  
 }
 
 #gallery .gallery-slider .slider-arrow.prev {
@@ -2464,12 +2464,12 @@ p.personal-data input[type=checkbox]:checked+label:before {
 
   #gallery .gallery-slider .slider-arrow.next,
   #gallery .gallery-slider .slider-arrow.prev {
-    display: none !important
+    display: none !important;
   }
 
   #gallery .gallery-slider .slider-dots {
     background-color: rgba(79, 25, 52, .5);
-    padding-top: 12px;
+   
     padding-left: 5px;
     padding-right: 5px
   }
