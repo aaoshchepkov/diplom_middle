@@ -23,7 +23,7 @@ const calculate = () => {
       if (item.checked) {price = priceSchelkovo[i];}
     });
     }
-    if (inputPrice.value === 'ТЕЛО2020'){
+    if (inputPrice.value === 'ТЕЛО2019'){
       price = Math.floor((price/100) *70);
     } 
    calc ();
