@@ -19,8 +19,7 @@ const gallerySlider = () => {
       spanL = document.createElement("span");
       arrowLeft.style.cssText = `left : 20px;`;
       spanL.style.cssText = `background-image: url(./images/arrow-left.png); background-repeat: no-repeat;
-      background-position: center;
-      z-index: 10000;`;
+      background-position: center;`;
       arrowLeft.appendChild(spanL);
 
 
@@ -31,8 +30,7 @@ const gallerySlider = () => {
       spanR = document.createElement("span");
       arrowRight.style.cssText = `right : 20px;`;
       spanR.style.cssText = `background-image: url(./images/arrow-right.png); background-repeat: no-repeat;
-      background-position: center;
-      z-index: 10000;`;
+      background-position: center;`;
       arrowRight.appendChild(spanR);
 
       

@@ -4,13 +4,14 @@
   import mainSlider from './modules/mainSlider';
   import gallerySlider from './modules/gallerySlider';
   import calculate from './modules/calculate';
-
+  import sendForm from './modules/sendForm';
   
   headListener();
   scrollTopMenu();
   mainSlider();
   gallerySlider();
   calculate();
+  sendForm();
 
   
 
