@@ -27,6 +27,7 @@ const headListener = () => {
     let btnMenu = document.querySelector('.menu-button > img');
     let popupMenu = document.querySelector('.popup-menu');
     let closeMenuBtn = document.querySelector('.close-menu-btn > img');
+    let thanks = document.querySelector('#thanks');
     if (target.closest('.open-popup')) {
       freeVisitForm.style.display = 'block';
     }
@@ -45,12 +46,15 @@ const headListener = () => {
     }
     if(target.closest('.close-btn')){
       gift.style.display = 'none';
+      thanks.style.display = 'none';
     }
     closeIcon.forEach((item) => {
       if (target === item) {
         freeVisitForm.style.display = 'none';
         callbackForm.style.display = 'none';
         gift.style.display = 'none';
+        thanks.style.display = 'none';
+
       }
     });
     overlay.forEach((item) => {
@@ -58,6 +62,7 @@ const headListener = () => {
         freeVisitForm.style.display = 'none';
         callbackForm.style.display = 'none';
         gift.style.display = 'none';
+        thanks.style.display = 'none';
       }
     });
   });
