@@ -5,13 +5,14 @@ const headListener = () => {
 
     const clubsList = () => {
       let clubsListItem = document.querySelector('.clubs-list > ul');
+      clubsListItem.style.zIndex = 1200;
       let clubsListBtn = document.querySelector('.clubs-list > p');
       if (target === clubsListBtn && clubsListItem.style.display === 'block') {
         clubsListItem.style.display = 'none';
       } else if (target === clubsListBtn) {
         clubsListItem.style.display = 'block';
       }
-      if (!target.closest('.clubs-list')) {
+      if (!target.closest('.club-select')) {
         clubsListItem.style.display = 'none';
       }
     };
