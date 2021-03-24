@@ -126,7 +126,7 @@ const options = {
 };
 const carousel = new sliderCarousel(options);
 carousel.init();
-  }
+}
   
 
 };
