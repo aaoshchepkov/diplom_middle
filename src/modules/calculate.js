@@ -12,7 +12,9 @@ const calculate = () => {
     priceTotal.textContent = price;
 
   };
-  cardOrder.addEventListener(('input'),() => {
+
+  if(priceTotal){
+    cardOrder.addEventListener(('input'),() => {
     if (cardLetoMozaika.checked === true ){
       time.forEach((item, i) => {
       if (item.checked) {price = priceMozaika[i];}
@@ -28,6 +30,8 @@ const calculate = () => {
     } 
    calc ();
   });
+  }
+  
 
   
 };

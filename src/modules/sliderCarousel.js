@@ -1,4 +1,8 @@
-export default class sliderCarousel {
+  'use strict';
+  const carousel = () => {
+  let wrapper = document.querySelector('.services-slider-wrapper'); 
+  if (wrapper){
+    class sliderCarousel {
   constructor({ main, wrap, next, prev, position = 0, slidesToShow = 5, responsive = [] }) {
     this.main = document.querySelector(main);
     this.wrap = document.querySelector(wrap);
@@ -95,3 +99,35 @@ export default class sliderCarousel {
     window.addEventListener('resize', checkResponse);
   }
 }
+
+const options = {
+  main: '.services-slider-wrapper',
+  wrap: '.services-slider',
+  prev: '.services-slider__prev',
+  next: '.services-slider__next',
+  slidesToShow: 5,
+  responsive: [{
+    breakpoint: 1200,
+    slidesToShow: 4,
+  },
+  {
+    breakpoint: 1024,
+    slidesToShow: 3,
+  },
+  {
+    breakpoint: 768,
+    slidesToShow: 2,
+  },
+  {
+    breakpoint: 576,
+    slidesToShow: 1,
+  }
+  ]
+};
+const carousel = new sliderCarousel(options);
+carousel.init();
+  }
+  
+
+};
+export default carousel;
