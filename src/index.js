@@ -5,7 +5,7 @@
   import gallerySlider from './modules/gallerySlider';
   import calculate from './modules/calculate';
   import sendForm from './modules/sendForm';
-  import validate from './modules/validate';
+  import maskPhone from './modules/maskPhone';
   import carousel from './modules/sliderCarousel';
 
   
@@ -15,7 +15,7 @@
   gallerySlider();
   calculate();
   sendForm();
-  validate();
+  maskPhone('[type=tel]');
   carousel();
  
   

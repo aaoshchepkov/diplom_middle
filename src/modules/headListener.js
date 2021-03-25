@@ -45,24 +45,47 @@ const headListener = () => {
       popupMenu.style.display = 'none';
     }
     if(target.closest('.close-btn')){
-      gift.style.display = 'none';
-      thanks.style.display = 'none';
+
+      if(gift){
+          gift.style.display = 'none';
+        }
+      if(thanks){
+          thanks.style.display = 'none';
+        }
     }
     closeIcon.forEach((item) => {
       if (target === item) {
-        freeVisitForm.style.display = 'none';
-        callbackForm.style.display = 'none';
-        gift.style.display = 'none';
-        thanks.style.display = 'none';
-
+        if (freeVisitForm){
+          freeVisitForm.style.display = 'none';
+        }
+        if (callbackForm){
+           callbackForm.style.display = 'none';
+        }
+       
+        if(gift){
+          gift.style.display = 'none';
+        }
+        if(thanks){
+          thanks.style.display = 'none';
+        }
+        
       }
     });
     overlay.forEach((item) => {
       if (target === item) {
-        freeVisitForm.style.display = 'none';
-        callbackForm.style.display = 'none';
-        gift.style.display = 'none';
-        thanks.style.display = 'none';
+        if (freeVisitForm){
+          freeVisitForm.style.display = 'none';
+        }
+        if (callbackForm){
+           callbackForm.style.display = 'none';
+        }
+       
+        if(gift){
+          gift.style.display = 'none';
+        }
+        if(thanks){
+          thanks.style.display = 'none';
+        }
       }
     });
   });
