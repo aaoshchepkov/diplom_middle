@@ -48,7 +48,7 @@ const sendForm = () => {
 
   let submitBtn = document.querySelectorAll('[type="submit"]');
   forms.forEach((itemForm) => {
-    itemForm.addEventListener('mouseover', (event) => {
+    itemForm.addEventListener('click', (event) => {
       const personal = itemForm.querySelector('.personal-data > input');
       let target = event.target;
       submitBtn.forEach((itemBtn) => {
