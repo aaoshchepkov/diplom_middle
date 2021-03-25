@@ -28,9 +28,6 @@ const sendForm = () => {
       block.parentNode.append(errorMessage);
     } else {
       errorMessage.style.display = 'block';
-       setTimeout(() => {
-       errorMessage.style.display = 'none';
-    }, 5000);
     }
   };
   const deleteError = block => {
