@@ -71,11 +71,14 @@ const sendForm = () => {
            itemBtn.disabled = true; 
            
           }
-          if (clubs[0].checked || clubs[1].checked){
+          if(choseClubs) {
+            if (clubs[0].checked || clubs[1].checked){
              choseClubs.style.color = '#ffd11a';
              return;
             } else {  itemBtn.disabled = true;
               choseClubs.style.color = '#ff0000';}
+          }
+          
         }
         if (target === clubs[0] || target === clubs[1] ) {
           choseClubs.style.color = '#ffd11a';
