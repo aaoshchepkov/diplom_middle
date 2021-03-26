@@ -52,6 +52,9 @@ const sendForm = () => {
   forms.forEach((itemForm) => {
     itemForm.addEventListener("click", (event) => {
       const personal = itemForm.querySelector(".personal-data > input");
+      const tel = itemForm.querySelector('[type="tel"]');
+      const clubs = itemForm.querySelectorAll('.club > input');
+      const choseClubs = itemForm.querySelector('.choose-club > h5');
       let target = event.target;
       submitBtn.forEach((itemBtn) => {
         if (target !== itemBtn) {
@@ -64,13 +67,26 @@ const sendForm = () => {
               checkCheckbox(personal);
             }
           }
+          if (tel.value.length < 18) {
+           itemBtn.disabled = true; 
+           
+          }
+          if (clubs[0].checked || clubs[1].checked){
+             choseClubs.style.color = '#ffd11a';
+             return;
+            } else {  itemBtn.disabled = true;
+              choseClubs.style.color = '#ff0000';}
+        }
+        if (target === clubs[0] || target === clubs[1] ) {
+          choseClubs.style.color = '#ffd11a';
         }
       });
     });
   });
 
-  let promoCode = document.querySelector('[placeholder="Промокод"]');
+  
   const validate = () => {
+    let promoCode = document.querySelector('[placeholder="Промокод"]');
     document.body.addEventListener("input", (e) => {
       const target = e.target;
       if (target.name === "name" && target !== promoCode) {
@@ -85,7 +101,7 @@ const sendForm = () => {
         return patternPhone.test(item);
       };
       if (target.type === "tel") {
-        if (!checkPhone(target.value)) {
+        if (!checkPhone(target.value) || target.value < 18 ) {
           target.style.border = "2px solid red";
           return;
         }

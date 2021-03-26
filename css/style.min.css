@@ -2232,7 +2232,7 @@ p.personal-data input[type=checkbox]:checked+label:before {
 }
 .error {
   font-size: 12px;
-  color: red
+  color: #ff0000
 }
 
 .loader {
