@@ -413,12 +413,7 @@
               </div>
               <div class="price">
                 <div class="price-message input-text">
-                  <input
-                    name="name"
-                    type="text"
-                    required
-                    placeholder="Промокод"
-                  />
+                  <input name="name-promo" type="text" placeholder="Промокод" />
                 </div>
                 <div class="price-message">Цена:</div>
                 <div class="price-message" id="price-total">1999</div>
@@ -674,7 +669,14 @@
       </div>
     </div>
     <div class="popup" id="thanks">
-      <div class="overlay"></div>
+      <div class="overlay">
+        <div class="loader">
+          <div class="column column1"></div>
+          <div class="column column2"></div>
+          <div class="column column3"></div>
+        </div>
+      </div>
+
       <div class="form-wrapper">
         <div class="close-form">
           <img src="images/close-icon.png" alt="close" class="close_icon" />
